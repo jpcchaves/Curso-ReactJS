@@ -10,6 +10,7 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
+import AulaFragment from "./components/AulaFragment";
 
 function App() {
   const cars = [
@@ -40,7 +41,7 @@ function App() {
 
       <CarDetails brand="Ford" km={10000000} color="Vermelho" newCar={false} />
 
-      <CarDetails brand="Ford" km={10000000} color="Vermelho" newCar={false} /> 
+      <CarDetails brand="Ford" km={10000000} color="Vermelho" newCar={false} />
 
       {/* Loop em array de objetos */}
       {cars.map((car) => (
@@ -51,6 +52,9 @@ function App() {
           newCar={car.newCar}
         />
       ))}
+
+      {/* Fragment */}
+      <AulaFragment propFragment="teste"/>
     </div>
   );
 }

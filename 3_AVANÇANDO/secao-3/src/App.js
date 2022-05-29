@@ -1,9 +1,13 @@
-import logo from './logo.svg';
+// Style
 import './App.css';
 
+// Imgs
 import City from '../src/assets/city.jpg'
+
+// Components
 import ManageData from './components/ManageData';
 import ListRender from './components/ListRender';
+import ConditionalRender from './components/ConditionalRender';
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
         <img src={City} alt="imagem da cidade" />
         <ManageData/>
         <ListRender/>
+        <ConditionalRender/>
     </div>
   );
 }

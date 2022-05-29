@@ -16,6 +16,7 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import { useState } from "react";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   const cars = [
@@ -23,6 +24,12 @@ function App() {
     { id: 2, brand: "Kia", color: "Azul", newCar: false, km: 2000 },
     { id: 3, brand: "VW", color: "Amalero", newCar: false, km: 200 },
   ];
+
+  const pessoas = [
+    {id: 1, name: "João Paulo", age: 24, job: "Programmer"},
+    {id: 2, name: "Zezin", age: 76, job: "Vendedor"},
+    {id: 3, name: "Paula", age: 16, job: "Estudante"}
+  ]
 
   // Função
   function showMessage() {
@@ -86,6 +93,15 @@ function App() {
       {/* State Lift */}
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage}/>
+      {/* Desafio */}
+      {pessoas.map(pessoa => (
+        <UserDetails
+          key={pessoa.id}
+          name={pessoa.name}
+          age={pessoa.age}
+          job={pessoa.job}
+        />
+      ))}
     </div>
   );
 }

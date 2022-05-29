@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import City from '../src/assets/city.jpg'
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </div>
       {/* Carregando IMGS dentro da pasta ASSETS (recomendado) */}
         <img src={City} alt="imagem da cidade" />
+        <ManageData/>
     </div>
   );
 }

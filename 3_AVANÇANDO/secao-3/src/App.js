@@ -3,6 +3,7 @@ import './App.css';
 
 import City from '../src/assets/city.jpg'
 import ManageData from './components/ManageData';
+import ListRender from './components/ListRender';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       {/* Carregando IMGS dentro da pasta ASSETS (recomendado) */}
         <img src={City} alt="imagem da cidade" />
         <ManageData/>
+        <ListRender/>
     </div>
   );
 }

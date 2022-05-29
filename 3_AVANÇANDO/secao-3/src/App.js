@@ -11,6 +11,7 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
 import AulaFragment from "./components/AulaFragment";
+import Container from "./components/Container";
 
 function App() {
   const cars = [
@@ -54,7 +55,15 @@ function App() {
       ))}
 
       {/* Fragment */}
-      <AulaFragment propFragment="teste"/>
+      <AulaFragment propFragment="teste" />
+
+      {/* Children */}
+      <Container myValue="testinnnng">
+        <p>Esse aqui é um filho que será recebido pelo componente filho</p>
+      </Container>
+      <Container>
+        <h5>Testando o container</h5>
+      </Container>
     </div>
   );
 }

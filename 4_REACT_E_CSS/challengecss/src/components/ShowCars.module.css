@@ -1,0 +1,12 @@
+body{
+    margin-top: 50px;
+}
+
+.brand_name{
+    color: gold;   
+    text-decoration: underline;
+}
+
+.list_styles{
+    font-weight: bolder;
+}

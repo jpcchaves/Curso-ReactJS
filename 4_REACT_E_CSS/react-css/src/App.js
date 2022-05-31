@@ -1,5 +1,6 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
+import Title from './components/Title'
 
 function App() {
   const n = 14;
@@ -24,6 +25,12 @@ function App() {
 
       {/* CLASSE DINÂMICA  */}
       <h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica</h2>
+
+      {/* CSS MODULES */}
+      <Title />
+      <h2 className="my_title">
+        Não recebe o estilo   o my_title foi um estilo modularizado e utilizado apenas no componente Title.
+      </h2>
     </div>
   );
 }

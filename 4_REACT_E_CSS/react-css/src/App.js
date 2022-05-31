@@ -3,6 +3,10 @@ import MyComponent from './components/MyComponent';
 
 function App() {
   const n = 14;
+  
+  // CLASSE DINÂMICA
+  const redTitle = true
+  // const redTitle = false
 
   return (
     <div className="App">
@@ -17,6 +21,9 @@ function App() {
       </p>
       {/* CSS INLINE DINÂMICO */}
       <h2 style= { n < 10 ? {color: "purple"} : {color: "pink"}}>CSS dinâmico</h2>
+
+      {/* CLASSE DINÂMICA  */}
+      <h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica</h2>
     </div>
   );
 }

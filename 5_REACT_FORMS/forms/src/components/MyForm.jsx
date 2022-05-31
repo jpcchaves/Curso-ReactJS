@@ -14,6 +14,7 @@ const MyForm = () => {
     // "e" é um objeto (retornado por padrão), dentro dele temos o "target" e dentro de target temos o "value", que é o valor inserido no input
   }
   console.log(name)
+  console.log(email)
 
 
   return (
@@ -30,10 +31,13 @@ const MyForm = () => {
         {/* Prática recomendada! */}
         <label>
           <span>E-mail</span>
-          <input type="email" name="email" placeholder='Digite o seu e-mail' />
+            {/* State inline */}
+          {/* (*não recomendado*) */}
+          <input type="email" name="email" placeholder='Digite o seu e-mail' onChange={(e) => {setEmail(e.target.value)}}/>
         </label>
         <input type="submit" value="enviar" />
 
+        
 
 
       </form>

@@ -11,7 +11,8 @@ const MyForm = ({ user }) => {
   const [name, setName] = useState(user ? user.name : '')
   const [email, setEmail] = useState(user ? user.email : '')
 
-  const [bio, setBio] = useState("")
+  const [bio, setBio] = useState(user ? user.bio : '')
+  const [role, setRole] = useState(user ? user.role : '')
 
   // 3- Funções de gerenciamento
   const handleName = (e) => {
@@ -22,11 +23,12 @@ const MyForm = ({ user }) => {
   // Envio de formulário
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("enviando o formulário", name, email, bio)
+    console.log("enviando o formulário", name, email, bio, role)
 
     // 7 - LIMPAR O FORM APÓS O SUBMIT
     setName("")
     setEmail("")
+    setBio("")
   }
 
   return (
@@ -51,6 +53,17 @@ const MyForm = ({ user }) => {
           <span>Bio:</span>
           <textarea name="bio" placeholder='Descrição do usuário' cols="30" rows="10" onChange={(e) => setBio(e.target.value)} value={bio}></textarea>
         </label>
+        {/* 9 - Select */}
+        <span>
+          <label>
+            <span>Função no sistema</span>
+            <select name="role" onChange={(e) => setRole(e.target.value)} value={role}>
+              <option value="user">Usuário</option>
+              <option value="editor">Editor</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </label>
+        </span>
 
 
         <input type="submit" value="enviar" />

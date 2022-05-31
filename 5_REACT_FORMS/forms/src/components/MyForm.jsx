@@ -1,22 +1,41 @@
 import React from 'react'
 import './MyForm.css'
 
+import { useState } from 'react'
+
 const MyForm = () => {
+  // 3- Gerenciamento de dados
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+
+  // 3- Funções de gerenciamento
+  const handleName = (e) => {
+    setName(e.target.value)
+    // "e" é um objeto (retornado por padrão), dentro dele temos o "target" e dentro de target temos o "value", que é o valor inserido no input
+  }
+  console.log(name)
+
+
   return (
     <div>
+
       {/* 1 - Criação de Forms */}
       <form>
         <div>
           <label htmlFor="name">Nome:</label>
-          <input type="text" name="name" placeholder='Digite o seu nome...' />
+          <input type="text" name="name" placeholder='Digite o seu nome...' onChange={handleName} />
         </div>
+
         {/* 2- Label envolvendo input */}
-          {/* Prática recomendada! */}
+        {/* Prática recomendada! */}
         <label>
           <span>E-mail</span>
-          <input type="email" name="email" placeholder='Digite o seu e-mail'/>
+          <input type="email" name="email" placeholder='Digite o seu e-mail' />
         </label>
         <input type="submit" value="enviar" />
+
+
+
       </form>
     </div>
   )

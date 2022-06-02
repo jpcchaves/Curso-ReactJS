@@ -1,30 +1,32 @@
 import './App.css';
-import axios from "axios";
 import { useState, useEffect } from 'react';
 
-
-const client = axios.create({
-  baseURL: "http://localhost:3000/products"
-});
+const url = "http://localhost:3000/products"
 
 function App() {
   const [products, setProducts] = useState([])
 
+  // 1- resgatando dados
   useEffect(() => {
-    async function getProducts() {
-      const resp = await client.get("/")
-      setProducts(resp.data)
-    }
-    getProducts()
-  }, [])
+    async function fetchData() {
+      const res = await fetch(url)
 
+      const data = await res.json()
+
+      setProducts(data)
+    }
+    fetchData()
+  }, [])
 
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>
-      <li>{products[0].name}</li>
-      <li>{products[1].name}</li>
-      <li>{products[2].name}</li>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>{product.name} - R$ {product.price}</li>
+        ))}
+      </ul>
+
     </div>
   );
 }

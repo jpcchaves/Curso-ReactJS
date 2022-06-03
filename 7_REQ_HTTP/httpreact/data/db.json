@@ -36,96 +36,24 @@
       "id": 7
     },
     {
-      "name": "ADICIONANDO",
+      "name": "1132",
       "price": "123",
       "id": 8
     },
     {
-      "name": "ADICIONANDO",
-      "price": "123",
+      "name": "",
+      "price": "",
       "id": 9
     },
     {
-      "name": "teste",
-      "price": "123",
+      "name": "",
+      "price": "",
       "id": 10
     },
     {
-      "name": "123",
+      "name": "olaaa",
       "price": "123",
       "id": 11
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 12
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 13
-    },
-    {
-      "name": "123",
-      "price": "123",
-      "id": 14
-    },
-    {
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "id": 17
-    },
-    {
-      "id": 18
-    },
-    {
-      "name": "teste",
-      "price": "123",
-      "id": 19
-    },
-    {
-      "name": "teste",
-      "price": "1111",
-      "id": 20
-    },
-    {
-      "name": "João Paulo De Castro Chaves",
-      "price": "09990",
-      "id": 21
-    },
-    {
-      "name": "teste",
-      "price": "123",
-      "id": 22
-    },
-    {
-      "name": "testando",
-      "price": "123",
-      "id": 23
-    },
-    {
-      "name": "testando",
-      "price": "123",
-      "id": 24
-    },
-    {
-      "name": "joao",
-      "price": "123",
-      "id": 25
-    },
-    {
-      "name": "teste",
-      "price": "123",
-      "id": 26
-    },
-    {
-      "name": "",
-      "price": "",
-      "id": 27
     }
   ]
 }

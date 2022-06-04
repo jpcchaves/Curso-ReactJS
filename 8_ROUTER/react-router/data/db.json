@@ -1,18 +1,18 @@
 {
     "products": [
       {
-        "name": "produto",
-        "price": "123",
+        "name": "Capa de Chuva",
+        "price": "110,00",
         "id": 1
       },
       {
-        "name": "produto",
-        "price": "123",
+        "name": "Mouse",
+        "price": "66,90",
         "id": 2
       },
       {
-        "name": "produto",
-        "price": "123",
+        "name": "Teclado",
+        "price": "220,90",
         "id": 3
       }
     ]

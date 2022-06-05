@@ -12,12 +12,23 @@ const Page1 = () => {
   const { counter } = useCounterContext();
 
   // 5- contexto mais complexo
-  const { color } = useTitleColorContext();
+  const { color, dispatch } = useTitleColorContext();
+
+  // 6 - alterando state complexo
+  const setTitleColor = (color) => {
+    dispatch({ type: color });
+  };
 
   return (
     <div>
-      <h1 style={{color: color}}>Home</h1>
+      <h1 style={{ color: color }}>Home</h1>
       <p>Valor do contador: {counter}</p>
+
+      {/* Alterando contexto */}
+      <div>
+        <button onClick={() => setTitleColor("RED")}>Vermelho</button>
+        <button onClick={() => setTitleColor("BLUE")}>Azul</button>
+      </div>
     </div>
   );
 };

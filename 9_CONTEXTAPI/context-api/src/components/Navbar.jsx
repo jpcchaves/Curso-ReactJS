@@ -1,5 +1,5 @@
 // Styling
-import './Navbar.css'
+import "./Navbar.css";
 
 // Router
 import { NavLink } from "react-router-dom";

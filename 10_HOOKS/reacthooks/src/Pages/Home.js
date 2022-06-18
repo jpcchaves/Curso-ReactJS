@@ -7,11 +7,12 @@ import HookUseState from "../components/HookUseState";
 import { useContext } from "react";
 import { SomeContext } from "../components/HookUseContext";
 import HookUseRef from "../components/HookUseRef";
+import HookUseCallBack from "../components/HookUseCallBack";
 
 // useRef
 
 const Home = () => {
-  const {contextValue} = useContext(SomeContext)
+  const { contextValue } = useContext(SomeContext);
 
   return (
     <div>
@@ -21,7 +22,8 @@ const Home = () => {
       <h2>useContext</h2>
       <p>Valor do contexto: {contextValue}</p>
       <hr />
-      < HookUseRef />
+      <HookUseRef />
+      <HookUseCallBack />
     </div>
   );
 };
